@@ -1,12 +1,6 @@
 import React from 'react';
-import { Stage, Layer, Image } from 'react-konva';
+import { Stage, Layer, Image, Rect } from 'react-konva';
 import useImage from 'use-image';
-
-// the first very simple and recommended way:
-const LionImage = () => {
-  const [image] = useImage('https://konvajs.org/assets/lion.png');
-  return <Image image={image} />;
-};
 
 
 const Slider = () => {
@@ -23,6 +17,14 @@ const Slider = () => {
         <Stage width={window.innerWidth} height={window.innerHeight}>
             <Layer>
                 <Image image={image} />
+                <Rect
+                    x={20}
+                    y={70}
+                    width={150}
+                    height={4}
+                    fill="red"
+                    shadowBlur={10}
+                />
             </Layer>
         </Stage>
         </div>
